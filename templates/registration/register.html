@@ -1,0 +1,29 @@
+<html lang="en">
+    <head>
+      {% include '../base/header.html' %} 
+      {% load static %}
+
+      <link href="{% static 'register.css' %}" rel="stylesheet">
+    </head>   
+  <body>
+    <!--navbar-->
+    {% include '../base/navbar.html' %}
+
+    <!--content-->
+    <div class="page-container">
+      <form class="login-form" method="post">
+        {% csrf_token %}
+        <p class="cr-acc"> Create Account</p>
+        <input class="name" name="name" type="text" placeholder="John Doe"/>
+        <input class="email-input" name="username" type="email" placeholder="john.doe@example.com"/>
+        <input class="password-input" placeholder="Password" name="password" type="password"/>
+        <input class="password-input" placeholder="Confirm Password" name="cpassword" type="password"/>
+        <button class="login-button" type="submit">Sign Up</button>
+      </form>
+    </div>
+
+    <!--footer-->
+    {% include '../base/footer.html' %}
+
+  </body>
+</html>
