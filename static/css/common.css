@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color:#ffdfd9;
+    font: 1rem/1.4 system-ui, sans-serif;
+}
+
+/* Desktop size */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+}
+
+.navbar{
+    display: flex;
+    background-color: #0a0a0a;
+    height: 60px;
+    padding-left: 25px;
+    padding-top: 10px;
+    margin-top:0px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.welcome-container{
+    margin: auto;
+    width: 95%;
+    height: 85%;
+    position: absolute;
+    top: 52%;
+    left: 1%;
+    right: 1%;
+    transform: translate(0, -50%);
+    background-color: #ffdfd9;
+    color:black;
+    border:8px solid black;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.welcome-center{
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+
+.title{
+    font-size: 30px;
+    color:#FFFFFF;
+    font-family: "Tahoma", sans-serif;
+    float:left
+}
+
+.title-welcome{
+    font-size: 35px;
+    color: black;
+    font-family: "Tahoma", sans-serif;
+    justify-content: center;
+    text-align: center;
+}
+.title:hover{
+    color: #FFFFFF;
+    text-decoration: none
+}
+.title:focus{
+    color: #FFFFFF;
+    text-decoration: none
+}
+
+.subtitle{
+    font-size: 18px;
+    color:#FFFFFF;
+    margin-top:20px;
+  }
+
+.profile-button{
+  border: 0px solid #0000;
+  background-color: transparent;
+  font-size: 40px;
+  height: 40px;
+  width: 40px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+  margin-right: 15px;
+}
+
+.icon{
+  color: white;
+  size: 50px;
+
+}
+
+.icon:hover{
+    color: #c2a90c;
+    size: 50px;
+}
+
+.icon::selection{
+    color: #c2a90c;
+    size: 50px;
+}
+
+.icon:focus{
+    color: #c2a90c;
+    size: 50px;
+}
+.dropdown-menu{
+    text-decoration: none;
+    background-color: rgb(36, 36, 36);
+    border-radius: 10px;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+.dropdown-item{
+    text-decoration: none;
+    color:#FFFFFF;
+    border-radius: 10px;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+.dropdown-item:hover{
+    text-decoration: none;
+    color:#FFFFFF;
+    background-color: #c2a90c;
+    border-radius: 10px;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+.meniu-option{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.meniu-option:hover{
+    color: black;
+    text-decoration: none;
+    background-color: #c2a90c;
+    border-radius: 5px;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+.meniu-option::selection{
+    color: black;
+    text-decoration: none;
+    background-color: #c2a90c;
+    border-radius: 5px;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+.meniu-option:focus{
+    color: black;
+    text-decoration: none;
+    background-color: #c2a90c;
+    border-radius: 5px;
+}
+
+.meniu-option-welcome{
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.meniu-option-welcome:hover{
+    color: black;
+    text-decoration: none;
+    background-color: #c2a90c;
+    border-radius: 5px;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+.meniu-option-welcome::selection{
+    color: black;
+    text-decoration: none;
+    background-color: #c2a90c;
+    border-radius: 5px;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+.meniu-option-welcome:focus{
+    color: black;
+    text-decoration: none;
+    background-color: #c2a90c;
+    border-radius: 5px;
+}
+
+
+
+
+/*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*/
+.footer{
+    background-color: rgb(0, 0, 0);
+    position:fixed;
+    bottom:0;
+    width: 100%;
+    height: 20px;
+  }
+
+.s1{
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 10px;
+    height: 20px;
+    width: 100%;
+    color: white;
+    text-align: left; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+.s2{
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 10px;
+    height: 40px;
+    width: 95%;
+    color: white;
+    text-align: right; 
+    margin-left: 10px;
+}
+  /*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*/

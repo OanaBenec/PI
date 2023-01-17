@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <link href="{% static 'passed_failed_tests.css' %}" rel="stylesheet">
+    <link href="{% static 'css/passed_failed_tests.css' %}" rel="stylesheet">
   </head>
   <body>
     <!--navbar--><!--navbar--><!--navbar--><!--navbar--><!--navbar--><!--navbar-->
@@ -73,6 +73,6 @@
     {% include 'base/footer.html' %}
     <!--footer-->
 
-    <script src="{% static 'run_tests.js' %}" defer data-code="{{ code }}" data-data="{{ data }}"></script>
+    <script src="{% static 'js/run_tests.js' %}" defer data-code="{{ code }}" data-data="{{ data }}"></script>
   </body> 
 </html>

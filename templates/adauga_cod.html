@@ -1,0 +1,138 @@
+<html lang="en">
+  <head>
+    {% load static %}
+    <!--flex grid boostrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <!--toggle dropdown menu-->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <!--Icon library-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    
+    <!-- install pyodide version 0.20.0 -->
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.20.0/full/pyodide.js"></script>
+
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">      
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link href="{% static 'css/adauga_cod.css' %}" rel="stylesheet">
+    <link href="{% static 'css/common.css' %}" rel="stylesheet">
+    <script src="{% static 'js/run_tests.js' %}" defer data-data="{{ data }}"></script>
+  </head>
+  <body>
+    <!--navbar_student--><!--navbar_student--><!--navbar_student--><!--navbar_student-->
+    <div class="row navbar" style="margin:0;">
+      <div class="col-2">
+        <div class="title">AnonTester</div>
+      </div>
+
+        <!--courses--><!--courses--><!--courses--><!--courses--><!--courses--><!--courses--><!--courses-->
+      <div class="col-1">
+        <a class="meniu-option" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+          <i class="bi bi-caret-right-fill"></i>Courses
+        </a>
+      </div>
+        <!--courses--><!--courses--><!--courses--><!--courses--><!--courses--><!--courses--><!--courses-->
+
+
+        <!--tests--><!--tests--><!--tests--><!--tests--><!--tests--><!--tests--><!--tests--><!--tests-->
+      <div class="col-1">
+        <a class="meniu-option" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="bi bi-caret-right-fill"></i> Tests
+        </a>
+      </div>
+        <!--tests--><!--tests--><!--tests--><!--tests--><!--tests--><!--tests--><!--tests--><!--tests-->
+
+
+        <!--homework--><!--homework--><!--homework--><!--homework--><!--homework--><!--homework-->
+      <div class="col-1">
+          <a class="meniu-option" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="bi bi-caret-right-fill"></i> Homework
+          </a>
+          </div>
+        <!--homework--><!--homework--><!--homework--><!--homework--><!--homework--><!--homework-->
+
+        <!--exercise--><!--exercise--><!--exercise--><!--exercise--><!--exercise--><!--exercise-->
+      <div class="col-1">
+        <a class="meniu-option" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="bi bi-caret-right-fill"></i> Exercise
+        </a>
+      </div>
+        <!--exercise--><!--exercise--><!--exercise--><!--exercise--><!--exercise--><!--exercise-->
+
+
+        <!--profile button--><!--profile button--><!--profile button--><!--profile button--><!--profile button--><!--profile button-->
+      <div class="col-6">
+        <div class="dropdown" style="float:right">
+          <button class="profile-button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="bi bi-person-circle icon"></i>
+          </button>
+          <div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Profile</a>
+            <a class="dropdown-item" href="/">Log out</a>
+          </div>
+        </div>
+      </div>
+        <!--profile button--><!--profile button--><!--profile button--><!--profile button--><!--profile button--><!--profile button-->
+
+      </div>
+    <!--navbar--><!--navbar--><!--navbar--><!--navbar--><!--navbar--><!--navbar-->
+    <h1> <code>&lt;textarea></code></h1>
+
+
+    <div class="row" > 
+      <!--enun_problema_cod--><!--enun_problema_cod--><!--enun_problema_cod--><!--enun_problema_cod--><!--enun_problema_cod-->
+      <div class="col-6 coloana1">
+        <div class="enunt-problema">
+          <h1 id="enunt-problema">{{ name }}</h1>
+          <span id="continut-problema">
+            {{ descr }}
+          </span>
+        </div>
+          <textarea class="code-editor" id="code-editor" onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
+      </div>
+      <!--enun_problema_cod--><!--enun_problema_cod--><!--enun_problema_cod--><!--enun_problema_cod--><!--enun_problema_cod-->
+
+        
+      <div class="col-6 coloana2">
+      <!--test_FYI--><!--test_FYI--><!--test_FYI--><!--test_FYI--><!--test_FYI--><!--test_FYI--><!--test_FYI--><!--test_FYI-->
+        <div class="col-3">
+          <div class="card-default">
+            <div class="row">
+              <div class="col-6">
+                <h2 class="card-title">Here are your results:</h2>
+                <hr class="gray line" style="height: 3px;">
+                <p class="card-text" id="title">[Waiting for submit...]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="clearable">
+        <div id="results">
+
+        </div>
+        </div>
+      </div>
+
+    <!--buttons --><!--buttons --><!--buttons --><!--buttons --><!--buttons --><!--buttons -->
+    <div>
+    <button class="button-submit" role="button" onclick="evaluatePython()">Submit</button>
+    <button class="button-retry"  role="button">Retry</button>
+    <button class="button-back" role="button">Back</button>
+    <button class="button-next" role="button">Next</button>
+    </div>
+
+    <!--footer--><!--footer--><!--footer--><!--footer--><!--footer-->
+    <div class="footer">
+      <span class="col-3 s1">Any problems? Contact us at
+        <a href="mailto:support@anontester.com" style="color:#c2a90c">support@anontester.com</a>
+      </span>
+      <span class="col-12 s2">
+        <a href="https://en.wikipedia.org/wiki/Terms_of_service" style="color:#c2a90c">Terms and conditions</a>
+      </span>
+    </div>
+  </body>
+</html>

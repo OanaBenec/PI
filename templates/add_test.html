@@ -1,0 +1,185 @@
+<html lang="en">
+  <head>
+    {% load static %}
+    <!--flex grid boostrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <!--toggle dropdown menu-->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <!--Icon library-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">      
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link href="{% static 'css/add_test.css' %}" rel="stylesheet">
+    <link href="{% static 'css/common.css' %}" rel="stylesheet">
+  
+    <script src="{% static 'js/parser/Ranges.js' %}"></script>
+    <script src="{% static 'js/parser/Literal.js' %}"></script>
+    <script src="{% static 'js/parser/AFD.js' %}"></script>
+  </head>
+  <body>
+    <!--navbar--><!--navbar--><!--navbar--><!--navbar--><!--navbar--><!--navbar-->
+    <div class="navbar">
+      <div class="col-2">
+        <div class="title">AnonTester</div>
+      </div>
+
+        <!--courses--><!--courses--><!--courses--><!--courses--><!--courses--><!--courses--><!--courses-->
+        <div class="col-1">
+          <div class="dropdown show" style="float:left;">
+            <a class="meniu-option" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+              <i class="bi bi-caret-right-fill"></i>Courses
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >
+                <a class="dropdown-item" href="#">View courses</a>
+                <a class="dropdown-item" href="#">Add new course</a>
+            </div>
+          </div>
+        </div>
+        <!--courses--><!--courses--><!--courses--><!--courses--><!--courses--><!--courses--><!--courses-->
+
+
+        <!--tests--><!--tests--><!--tests--><!--tests--><!--tests--><!--tests--><!--tests--><!--tests-->
+        <div class="col-1">
+          <div class="dropdown show" style="float:left">
+            <a class="meniu-option" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="bi bi-caret-right-fill"></i> Tests
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">View tests</a>
+                <a class="dropdown-item" href="#">Add new test</a>
+            </div>
+          </div>
+        </div>
+        <!--tests--><!--tests--><!--tests--><!--tests--><!--tests--><!--tests--><!--tests--><!--tests-->
+
+
+        <!--profile button--><!--profile button--><!--profile button--><!--profile button--><!--profile button--><!--profile button-->
+        <div class="col-6">
+          <div class="dropdown" style="float:right">
+            <button class="profile-button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="bi bi-person-circle icon"></i>
+            </button>
+                <div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Profile</a>
+                  <a class="dropdown-item" href="#">Log out</a>
+                </div>
+          </div>
+        </div>
+        <!--profile button--><!--profile button--><!--profile button--><!--profile button--><!--profile button--><!--profile button-->
+
+      </div>
+    <!--navbar--><!--navbar--><!--navbar--><!--navbar--><!--navbar--><!--navbar-->
+
+    <!--content-->
+    
+    <div class="row">
+    <form method="post" id="form">
+    {% csrf_token %}
+
+      <div class="column">
+        <div class="card">
+
+            <label for="fname">Test name</label><br>
+            <input type="text" id="title" name="title"><br>
+            <p style="color: red" id="ErrorT"></p>
+            <br><label for="lname">Description</label><br>
+            <textarea rows="5" cols="35" name="Description" id="descr"></textarea><br>
+            <p style="color: red" id="ErrorD"></p>
+              
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+        
+            <br><label for="lname">Input</label><br>
+            <p style="color: red" id="Error"></p>
+            <textarea rows="5" cols="35" id="input" name="InputData" onchange   = "myHandler();" onkeypress = "this.onchange();" onpaste    = "this.onchange();" oninput    = "this.onchange();"></textarea><br>
+            <br><label for="lname">Expected output</label><br>
+            <textarea rows="5" cols="35" name="OutputScript" id="Output"></textarea><br>
+            <p style="color: red" id="ErrorO"></p>
+
+            <div class="dropdown">
+                <button class="dropbtn">Mark</button>
+                <div class="dropdown-content">
+                  <a href="#">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                  <a href="#">6</a>
+                  <a href="#">7</a>
+                  <a href="#">8</a>
+                  <a href="#">9</a>
+                  <a href="#">10</a>
+                </div>
+              </div>
+            
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+           
+            <label for="start">From:</label>
+            <input type="date" id="start" name="startDate" innerHTML="2023-01-20" min="2023-01-01" max="2024-12-31">
+            <input type="time" id="appt" name="startHr" min="08:00" max="19:00" required>
+            <label for="start">To:</label>
+            <input type="date" id="stop" name="stopDate" innerHTML="2023-01-20" min="2023-01-01" max="2024-12-31">
+            <input type="time" id="appt" name="stopHr" min="08:00" max="19:00" required>
+
+
+            <br><button class="button1" role="button" id="submit">Add test</button>
+            <script type="text/javascript">
+              $('#submit').on('click',function() {
+                document.getElementById("ErrorT").innerHTML = "";
+                document.getElementById("ErrorD").innerHTML = "";
+
+                var title = document.getElementById("title");
+                var descr = document.getElementById("descr");
+                var err = document.getElementById("Error");
+                var input = document.getElementById("input");
+                var output = document.getElementById("Output");
+
+                if(title.value === "" || descr.value === "" || err.innerHTML !== "" || input.value === "" || output.value === "") {
+                  if(title.value === "")
+                    document.getElementById("ErrorT").innerHTML = "Please fill the title.";
+                  if(descr.value === "")
+                    document.getElementById("ErrorD").innerHTML = "Please fill the description.";
+                  if(input.value === "")
+                    document.getElementById("Error").innerHTML = "Please fill the input format.";
+                  if(output.value === "")
+                    document.getElementById("ErrorO").innerHTML = "Please fill the output script.";
+                  return false;
+                }
+                // if you want to submit the form here 
+                console.log(1);
+                $('#form').submit();
+              });
+            </script>
+            
+        </div>
+      </div>
+    
+    </form>
+    </div>
+    <!--content-->
+
+
+    <!--footer--><!--footer--><!--footer--><!--footer--><!--footer-->
+    <div class="footer">
+      <span class="col-3 s1">Any problems? Contact us at
+        <a href="mailto:support@anontester.com" style="color:#c2a90c">support@anontester.com</a>
+      </span>
+      <span class="col-12 s2">
+        <a href="https://en.wikipedia.org/wiki/Terms_of_service" style="color:#c2a90c">Terms and conditions</a>
+      </span>
+    </div>
+    <!--footer--><!--footer--><!--footer--><!--footer--><!--footer-->
+  </body> 
+</html>

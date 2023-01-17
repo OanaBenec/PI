@@ -1,0 +1,438 @@
+.welcome-container{
+    margin: auto;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(0, -50%);
+    background-color: #ffdfd9;
+    color:black;
+    border:8px solid black;
+    width: 800px;
+    height: 400px;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.welcome-center{
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+
+.title{
+    font-size: 30px;
+    color:#FFFFFF;
+    font-family: "Tahoma", sans-serif;
+    float:left
+}
+
+.title-welcome{
+    font-size: 35px;
+    color: black;
+    font-family: "Tahoma", sans-serif;
+    justify-content: center;
+    text-align: center;
+}
+.title:hover{
+    color: #FFFFFF;
+    text-decoration: none
+}
+.title:focus{
+    color: #FFFFFF;
+    text-decoration: none
+}
+
+.subtitle{
+    font-size: 18px;
+    color:#FFFFFF;
+    margin-top:20px;
+  }
+
+.profile-button{
+  border: 0px solid #0000;
+  background-color: transparent;
+  font-size: 40px;
+  height: 40px;
+  width: 40px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+  margin-right: 15px;
+}
+
+.icon{
+  color: white;
+  size: 50px;
+
+}
+
+.icon:hover{
+    color: #c2a90c;
+    size: 50px;
+}
+
+.icon::selection{
+    color: #c2a90c;
+    size: 50px;
+}
+
+.icon:focus{
+    color: #c2a90c;
+    size: 50px;
+}
+.dropdown-menu{
+    text-decoration: none;
+    background-color: rgb(36, 36, 36);
+    border-radius: 10px;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+.dropdown-item{
+    text-decoration: none;
+    color:#FFFFFF;
+    border-radius: 10px;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+.dropdown-item:hover{
+    text-decoration: none;
+    color:#FFFFFF;
+    background-color: #c2a90c;
+    border-radius: 10px;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+.meniu-option{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.meniu-option:hover{
+    color: black;
+    text-decoration: none;
+    background-color: #c2a90c;
+    border-radius: 5px;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+.meniu-option::selection{
+    color: black;
+    text-decoration: none;
+    background-color: #c2a90c;
+    border-radius: 5px;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+.meniu-option:focus{
+    color: black;
+    text-decoration: none;
+    background-color: #c2a90c;
+    border-radius: 5px;
+}
+
+
+    /*butoane*/
+  .button-submit {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top: 90%;
+    left: 60%;
+    text-align: center;
+    
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -o-transform: translate3d(-50%, -50%, 0);
+    
+    -webkit-border-radius: 8;
+    border-radius: 8px;
+    font-size: 21px;
+    background: #060606;
+    padding: 10px 20px 10px 10px;
+    text-decoration: none;
+    -webkit-transition-duration: 0.7s;
+    /* Safari */
+    transition-duration: 0.7s;
+    border: none;
+    cursor: pointer;
+  }
+  .button-submit:hover {
+    background: #c2a90c;
+    text-decoration: none;
+    color: black;
+  }
+
+  .button-retry {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top: 90%;
+    left: 30%;
+    text-align: center;
+    
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -o-transform: translate3d(-50%, -50%, 0);
+    
+    -webkit-border-radius: 8;
+    border-radius: 8px;
+    font-size: 21px;
+    background: #060606;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    -webkit-transition-duration: 0.7s;
+    /* Safari */
+    transition-duration: 0.7s;
+    border: none;
+    cursor: pointer;
+  }
+  .button-retry:hover {
+    background: #c2a90c;
+    text-decoration: none;
+    color: black;
+  }
+
+  .button-back {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top: 90%;
+    left: 20%;
+    text-align: center;
+    
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -o-transform: translate3d(-50%, -50%, 0);
+    
+    -webkit-border-radius: 8;
+    border-radius: 8px;
+    font-size: 21px;
+    background: #060606;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    -webkit-transition-duration: 0.7s;
+    /* Safari */
+    transition-duration: 0.7s;
+    border: none;
+    cursor: pointer;
+  }
+  .button-back:hover {
+    background: #c2a90c;
+    text-decoration: none;
+    color: black;
+  }
+
+  .button-next {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top: 90%;
+    left: 70%;
+    text-align: center;
+    
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -o-transform: translate3d(-50%, -50%, 0);
+    
+    -webkit-border-radius: 8;
+    border-radius: 8px;
+    font-size: 21px;
+    background: #060606;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    -webkit-transition-duration: 0.7s;
+    /* Safari */
+    transition-duration: 0.7s;
+    border: none;
+    cursor: pointer;
+  }
+  .button-next:hover {
+    background: #c2a90c;
+    text-decoration: none;
+    color: black;
+  }
+
+/*butoane*/
+
+ /* textarea aici */
+
+  .grow-wrap {
+    /* easy way to plop the elements on top of each other and have them both sized based on the tallest one's height */
+    display: grid;
+  }
+  .grow-wrap::after {
+    /* Note the weird space! Needed to preventy jumpy behavior */
+    content: attr(data-replicated-value) " ";
+  
+    /* This is how textarea text behaves */
+    white-space: pre-wrap;
+  
+    /* Hidden from view, clicks, and screen readers */
+    visibility: hidden;
+  }
+  .grow-wrap > textarea {
+    /* You could leave this, but after a user resizes, then it ruins the auto sizing */
+    resize: none;
+  
+    /* Firefox shows scrollbar on growth, you can hide like this. */
+    overflow: hidden;
+  }
+  .grow-wrap > textarea,
+  .grow-wrap::after {
+    /* Identical styling required!! */
+    border: 1px solid black;
+    padding: 1rem;
+    font: inherit;
+    margin-top: 1%;
+    margin-left: 0.5%;
+    margin-right: 60%;
+    /* Place on top of each other */
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  label {
+    display: block;
+  }
+
+  
+/*vizualizare teste */
+
+
+.card-default{
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 20px;
+    width: 350px;
+    height: 60px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+}
+
+.card{
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 20px;
+    width: 350px;
+    height: 60px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+}
+
+.card:hover{
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 20px;
+    width: 350px;
+    height: 40px;
+    box-shadow: 0 6px 6px rgba(251, 251, 251, 0.6);
+}
+
+.card-title {
+    color: black;
+    margin-top: 5px;
+    font-size: 12px;
+    margin-left: 6px;
+}
+
+.card-text {
+    color: black;
+    margin-left: 6px;
+    font-size: 12px;
+}
+
+.csuccess{
+    border: 3px solid rgb(5, 123, 5);
+}
+
+.csuccess:hover{
+    border: 3px transparent;
+}
+
+.cwarning{
+    border: 3px solid #c2a90c;
+}
+
+.cwarning:hover{
+    border: transparent;
+}
+
+.cdanger{
+    border: 2px solid rgb(189, 10, 10);
+}
+
+.cdanger:hover{
+    border: transparent;
+}
+
+.icon-test{
+    font-size: 30px;
+    float: right;
+    margin-top: 6px;
+}
+
+.check{
+    color: rgb(5, 123, 5);
+}
+
+.warning{
+    color: #c2a90c
+}
+
+.fail{
+    color: rgb(189, 10, 10)
+}
+
+.line{
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+.green{
+    color: rgb(5, 123, 5);
+}
+
+.yellow{
+    color: #c2a90c;
+}
+
+.red{
+    color: rgb(189, 10, 10);
+}
+
+.gray{
+    color: gray;
+}
+
+.coloana1{
+  padding: 2%;
+}
+
+.coloana2{
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 10%;
+}
+
+.code-editor{
+  height: 100%;
+  width: 100%;
+  margin-top: 3%;
+}
+
+.enunt-problema{
+  display: inline-block;
+  width: 100%;
+  height: 30%;
+}

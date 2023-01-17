@@ -11,8 +11,8 @@
             <i class="bi bi-caret-right-fill"></i>Courses
           </a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Browse courses</a>
-            <a class="dropdown-item" href="#">Your courses</a>
+            <a class="dropdown-item" href="{{ name }}/courses/browse">Browse courses</a>
+            <a class="dropdown-item" href="{{ name }}/courses">Your courses</a>
           </div>
         </div>
       </div>
@@ -25,9 +25,9 @@
             <i class="bi bi-caret-right-fill"></i> Assignments
           </a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="{{ name }}/tests/1">Test 1</a>
-            <a class="dropdown-item" href="{{ name }}/tests/2">Test 2</a>
-            <a class="dropdown-item" href="{{ name }}/tests/3">Test 3</a>
+            {% for i in tests %}
+            <a class="dropdown-item" href="{{ name }}/tests/{{ i }}">Test {{ i }}</a>
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -41,8 +41,8 @@
           </button>
               <div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="#">Profile</a>
-                <a class="dropdown-item" href="#">Classes</a>
-                <a class="dropdown-item" href="#">Log out</a>
+                <a class="dropdown-item" href="/courses">Classes</a>
+                <a class="dropdown-item" href="/">Log out</a>
               </div>
         </div>
       </div>
